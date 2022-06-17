@@ -1,0 +1,7 @@
+1) Click en el fondo que se retire el buscador. Logrado.
+
+2) Covertirlo en responsive. Logrado
+
+3) Que ya este seleccionado el buscador. Logrado
+
+4) Al quitar buscador, que no contenga contenido dentro. Logrado
