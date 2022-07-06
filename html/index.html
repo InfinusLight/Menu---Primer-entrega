@@ -5,15 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <link rel="stylesheet" href="/css/style.css">
   
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/aeeaca3c2d.js" crossorigin="anonymous"></script>
- 
+
+  <!--JS-->
   <script src="/js/jquery-3.6.0.min.js"></script>
   <script src="/js/AnimacionMenu.js"></script>
   <script src="/js/AnimacionScroll.js"></script>
@@ -21,30 +18,30 @@
 
   <title>InfinusLight</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-
-      <header id="header">
+<!------------------------------------------------------------HEADER------------------------------------------------------------->
+  <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <div class="container-fluid">
+          <div class="container">
+
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="/index.html">
-              <img src="" alt="">
-         
-              <span class="logo text-uppercase ">Infinus</span>
-           
+              <div class="logo">
+                <img src="/Logos/logo infinus light 250x150 horizontal.png" alt="">
+              </div>
             </a>
 
             <div class="icons order-lg-2">
-            
 
-                <i class="fa fa-shopping-cart pe-5"></i>
-            
+                <i id="i" class="fa fa-shopping-cart pe-5"></i>
             
                 <i class="fa fa-heart pe-5"></i>
              
-
                 <i class="fa fa-solid fa-user pe-5"></i>
-
 
                 <i class="fa fa-search pe-5" id="icono-busqueda"></i>
 
@@ -56,21 +53,33 @@
             </button>
 
 
-
-            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+            <div class="menu collapse navbar-collapse order-lg-1 " id="navMenu">
 
               <ul class="navbar-nav d-flex text-center justify-content mx-auto mb-2 mb-lg-0 me-auto">
 
-                <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Inicio</a>
+                <li class="nav-item px-2 py-2">
+                  <a id="inicio-menu" class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Inicio</a>
                 </li>
 
-                <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Platos</a>
+                <li class="nav-item dropdown px-2 py-2">
+                  <a class="desplacar nav-link dropdown-toggle text-uppercase text-dark fst-normal" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Platos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <a class="dropdown-item fw-bold fst-italic">Categorías</a> 
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" href="#">Todos</a></li>
+                    <li><a class="dropdown-item" href="#">Española</a></li>
+                    <li><a class="dropdown-item" href="#">Italiana</a></li>
+                    <li><a class="dropdown-item" href="#">Criolla</a></li>
                 </li>
+              </ul>
+              
 
                 <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Pedidos</a>
+                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Nosotros</a>
                 </li>
 
                 <li class="nav-item px-2 py-2 ">
@@ -78,21 +87,16 @@
                 </li>
                 
               </ul>
-
             </div>
-
           </div>
         </nav>
+  </header>  
 
-      </header>  
-
-
-      <div id="contenedor_barra_busqueda">
+  <div id="contenedor_barra_busqueda">
         <input type="text" id="inputBusqueda" placeholder="¿Qué desea buscar?">
-      </div>
+  </div>
 
+  <div id="fondo"></div> <!--Con los estilos de CSS abarca toda la pagina--> 
 
-  <div id="fondo"></div>
-  
   </body>
 </html>
