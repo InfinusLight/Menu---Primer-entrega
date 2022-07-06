@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\Estrategia Visual\\Paleta de colores"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Menu",
+		"liveServer.settings.port": 5501
+	}
+}

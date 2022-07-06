@@ -3,10 +3,17 @@
 
 :root{
   --sm-font: "Poppins", sans-serif;
-  --MenuHov: rgb(193, 115, 32);
-}
 
-                        /*-------------------------Estilos Generales-------------------------*/
+  /* Variables de colores */
+  --Primero: #145DA0;
+  --Segundo: #00827f;
+  --Tercero: #22485d;
+  --Cuarto: #809d99;
+  --Quinto: #f3f6ee;
+}
+                                             /*-------------------------Estilos Generales-------------------------*/
+
+
 *{
   margin: 0;
   padding: 0;
@@ -26,7 +33,15 @@ body{
   background: #fff;
 }
 
-/* NavBar */
+
+
+
+                                               /*------------------------- FIN - Estilos Generales-------------------------*/
+
+
+
+
+/*-------------------------------------------------------------------------------Menu-----------------------------------------------------------------------------*/
 
 header{
   width: 100%;
@@ -39,7 +54,16 @@ header{
   transition: all 600ms;
 }
 
+header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+header .logo img{
+  width: 43px;
+  
+}
 
 .navbar-brand{
   display: flex;
@@ -61,29 +85,32 @@ header{
 }
 
 .nav-link:hover{
-  color: var(--MenuHov)!important;
+  color: var(--Primero)!important;
 }
 
 .nav-item{
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
 }
 
+
+
 /*Iconos*/
 
 header i{
   transition: all 500ms;
   cursor: pointer;
-  font-size: 16px;
-
+  font-size: 15px;
+  margin-top: -10px;
 }
 
 header i:hover{
-  color: var(--MenuHov);
+  color: var(--Primero);
 }
 
 
 
-/*Buscador - Icono*/
+/*----Buscador - Estilos----*/
+
 #icono-busqueda{
   color: #282828;
   transition: all 300ms;
@@ -92,11 +119,6 @@ header i:hover{
 #icono-busqueda:hover{
   color: var(--MenuHov);
 }
-
-
-
-
-                                /*-------------------Buscador - Estilos-------------------*/
 
 #contenedor_barra_busqueda{
   position: fixed;
@@ -150,14 +172,12 @@ header i:hover{
 #fondo{
   width: 100%;
   height: 100%;
-  position: fixed;
-  left: 0;
   z-index: 7;
 }
 
 
 
-                    /*-------------------Media queries - Detalles del menu--------------------*/
+/*MENU - RESPONSIVE*/
 
 
 @media(max-width: 1400px){
@@ -174,55 +194,49 @@ header i:hover{
 
   header nav .icons i{
     font-size: 15px;
-    transition: all 300ms;
   }
 
-}
-
-@media(max-width: 992px) {
-
-  nav{
-    margin-top: 10px;
-    transition: all 300ms;
-  }
-
-  #navMenu ul{
-    transition: all 300ms;
-    padding-top: 20px;
-    transition: all 300ms;
-  }
 }
 
 @media(min-width: 992px){
 
   .nav-item{
-    transition: all 300ms;
     border-bottom: none;
   }
+  
 
 }
 
 @media(max-width: 770px){
 
   header .icons{
-    display: flex;
-    margin-left: 11px;
+    padding-left: 30px;
     transition: all 300ms;
   }
 
 }
 
-@media(max-width: 518px){
+@media(max-width: 452px){
 
-  .navbar-toggler{
-    margin-left: 16px;
+  header{
+    height: 130px;
+    transition: all 600ms;
+  }
+
+  .logo img{
+    margin-left: 10px;
   }
 
   .nav_mod{
     height: 120px;
     box-shadow: 1px 4px 9px 0px #00000020;
     background: #fff;
-    transition: all 300ms;
+    transition: all 1200ms;
+    z-index: 100;
+  }
+
+  .navbar-toggler{
+    margin-top: 6px;
   }
 
   #contenedor_barra_busqueda{
@@ -239,34 +253,418 @@ header i:hover{
 
 }
 
-@media(max-width: 444px){
+@media(max-width: 409px){
+
+ 
+
   header .icons{
-    padding-left: 18px;
+    padding-left: 15px;
+    padding-bottom: 5px;
   }
+
+   .nav_mod{
+      height: 140px;
+      box-shadow: 1px 4px 9px 0px #00000020;
+      background: #fff;
+      transition: all 1200ms;
+   }
+
+    #contenedor_barra_busqueda{
+      margin-top: 40px;
+    }
+
 }
 
+@media(max-width: 390px){
 
-@media(max-width: 395px){
- 
+  header .icons{
+    padding-top: 10px;
+    padding-left: 14px;
+    
+  }
+
+   header{
+    height: 140px;
+  }
+
   .nav_mod{
-    height: 160px;
+    height: 130px;
     box-shadow: 1px 4px 9px 0px #00000020;
     background: #fff;
-    transition: all 300ms;
-  }
+    transition: all 1200ms;
+   }
 
-  header .icons{
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-right: -20px;
-    transition: all 300ms;
-  }
-
-  #contenedor_barra_busqueda{
-    margin-top: 60px;
-  }
-
+    #contenedor_barra_busqueda{
+      margin-top: 40px;
+    }
 }
 
-/*Fin*/
 
+@media(max-width: 380px){
+
+   header .icons{
+    padding-top: 18px;
+    padding-left: 14px;
+    padding-bottom: 13px;
+  }
+
+   header{
+    height: 180px;
+  }
+
+  .nav_mod{
+    height: 180px;
+    box-shadow: 1px 4px 9px 0px #00000020;
+    background: #fff;
+    transition: all 1200ms;
+   }
+
+    #contenedor_barra_busqueda{
+      margin-top: 80px;
+    }
+}
+
+
+/*---------------------------------------------------------------------------FIN DE MENU---------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------SLIDER-------------------------------------------------------------------------------*/
+
+.carousel-inner{
+  max-height: 45rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*SLIDER - RESPONSIVE...*/
+
+/*-------------------------------------------------------------------------FIN - SLIDER----------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------SOBRE NOSOTROS---------------------------------------------------------------------------*/
+#sobre{
+  margin-bottom: 15rem;
+}
+
+.sobre-section{
+  background: #fff;
+}
+
+.sobre-section .card,
+.sobre-section .card img{
+  border-radius: 0.625rem;
+}
+
+#sobre{
+  margin-top: 10rem;
+}
+
+#h2{
+  color: #22485d;
+  font-weight: 600;
+}
+
+#p{
+  margin-top: 3rem;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(88, 87, 87);
+}
+
+
+/*-----------------------------------------------------------------------FIN - SOBRE NOSOTROS----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------PLATOS------------------------------------------------------------------------------*/
+#title-platos{
+  padding-bottom: 1rem;
+}
+
+#explore-food{
+  padding-bottom: 10rem;
+}
+
+.explore-food .card{
+  border: none;
+  background-color: transparent;
+  border-radius: 0.9375rem;
+}
+
+.explore-food .card img{
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.explore-food .card span{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00827f;
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.explore-food #info-platos{
+  color: #22485d;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgb(97, 97, 97);
+}
+
+.main-btn{
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--Primero);
+  color: wheat;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+
+.main-btn:hover{
+  background-color: #175793;
+}
+
+.icons-star{
+  margin-left: 16rem;
+  margin-top: -48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------Preguntas Frecuentes---------------------------------------------------------------------*/
+#preguntas-frecuentes{
+  margin-bottom: 8rem;
+}
+
+.preguntas h5 span{
+  color: var(--Segundo);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.preguntas h5{
+  font-size: 22px;
+  color: var(--Tercero);
+  font-weight: 600;
+}
+
+.preguntas #SobreNosotros{
+  color: #666;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+#PregTitle{
+  color: var(--Segundo);
+}
+
+.preguntas #PregTitle::before{
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 50px;
+  background-color: var(--Segundo);
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.preguntas .parrafos{
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------Contacto----------------------------------------------------------------------------*/
+#contacto{
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.contacto-titulo{
+  color: var(--Cuarto);
+}
+
+.contact-intro{
+  color: #666;
+  font-size: 18px;
+}
+
+.btn-mensaje{
+  border: 3px solid rgba(100,100,100,0.1);
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-image: linear-gradient(to left, #145DA0, #00827f);
+  margin-bottom: 5rem;
+  transition: all 300ms;
+}
+
+.btn-mensaje:hover{
+ transform: scale(1.01);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------Pié de pagina---------------------------------------------------------------------------*/
+
+@media(max-width: 767px){
+  .iconos-contact{
+     margin-left: 2rem;
+  }
+}

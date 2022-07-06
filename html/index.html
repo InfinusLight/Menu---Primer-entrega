@@ -5,15 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <link rel="stylesheet" href="/css/style.css">
   
   <!--FontAwesome-->
   <script src="https://kit.fontawesome.com/aeeaca3c2d.js" crossorigin="anonymous"></script>
- 
+
+  <!--JS-->
   <script src="/js/jquery-3.6.0.min.js"></script>
   <script src="/js/AnimacionMenu.js"></script>
   <script src="/js/AnimacionScroll.js"></script>
@@ -21,30 +18,30 @@
 
   <title>InfinusLight</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-
-      <header id="header">
+<!---------------------------------------------------------------------------HEADER--------------------------------------------------------------------------------->
+  <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <div class="container-fluid">
+          <div class="container">
+
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="/index.html">
-              <img src="" alt="">
-         
-              <span class="logo text-uppercase ">Infinus</span>
-           
+              <div class="logo">
+                <img src="/Logos/logo infinus light 250x150 horizontal.png" alt="">
+              </div>
             </a>
 
             <div class="icons order-lg-2">
-            
 
-                <i class="fa fa-shopping-cart pe-5"></i>
-            
+                <i id="i" class="fa fa-shopping-cart pe-5"></i>
             
                 <i class="fa fa-heart pe-5"></i>
              
-
                 <i class="fa fa-solid fa-user pe-5"></i>
-
 
                 <i class="fa fa-search pe-5" id="icono-busqueda"></i>
 
@@ -56,21 +53,33 @@
             </button>
 
 
-
-            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+            <div class="menu collapse navbar-collapse order-lg-1 " id="navMenu">
 
               <ul class="navbar-nav d-flex text-center justify-content mx-auto mb-2 mb-lg-0 me-auto">
 
-                <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Inicio</a>
+                <li class="nav-item px-2 py-2">
+                  <a id="inicio-menu" class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Inicio</a>
                 </li>
 
-                <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Platos</a>
+                <li class="nav-item dropdown px-2 py-2">
+                  <a class="desplacar nav-link dropdown-toggle text-uppercase text-dark fst-normal" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Platos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <a class="dropdown-item fw-bold fst-italic">Categorías</a> 
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" href="#">Todos</a></li>
+                    <li><a class="dropdown-item" href="#">Española</a></li>
+                    <li><a class="dropdown-item" href="#">Italiana</a></li>
+                    <li><a class="dropdown-item" href="#">Criolla</a></li>
                 </li>
+              </ul>
+              
 
                 <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Pedidos</a>
+                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Nosotros</a>
                 </li>
 
                 <li class="nav-item px-2 py-2 ">
@@ -78,21 +87,397 @@
                 </li>
                 
               </ul>
+            </div>
+          </div>
+        </nav>
+  </header>  
 
+  <div id="contenedor_barra_busqueda">
+        <input type="text" id="inputBusqueda" placeholder="¿Qué desea buscar?">
+  </div>
+
+  <div id="fondo"> <!--Con los estilos de CSS abarca toda la pagina--> 
+
+
+
+
+
+
+<!---------------------------------------------------------------------------SLIDER--------------------------------------------------------------------------------->
+
+  <div class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#header" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#header" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#header" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="/Archivos/slider-1.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/Archivos/slider-2.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/Archivos/slider-3.png" data-bs-interval="2500" class="d-block w-100" alt="slider 3">
+      </div>
+
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#header" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+       <span class="visually-hidden">Prev</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#header" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+
+
+
+
+
+
+
+<!-----------------------------------------------------------------------SOBRE NOSOTROS----------------------------------------------------------------------------->
+
+  <section id="sobre">
+      <div class="sobre-section weapper mt-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+              <div class="card border-0">
+                <img src="/Archivos/Sobre nosotros.png" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12 info">
+              <h2 id="h2">Felices de hacer comida real con los mejores ingredientes.</h2>
+              <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quasi, animi id iure corrupti exercitationem inventore error magnam quisquam voluptatibus earum numquam accusantium illum quaerat, similique nobis deserunt ratione? Deleniti?!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+<!--FIN - SOBRE NOSOTROS-->
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------PLATOS--------------------------------------------------------------------------------->
+
+<section class="" id="explore-food">
+  <div class="explore-food">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-content text-center">
+            <h2 id="title-platos">Explora tu Menú</h2>
+            <p id="info-platos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam accusamus sint vitae magnam animi voluptates molestiae veniam atque, dolorum cum?</p>
+          </div>
+        </div>
+
+        <div class="row pt-5 d-flex">
+          <div class="col-lg-4   col-md-6   mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 1.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 1.</h5>
+
+                <p class="pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+
+              </div>
+            </div>
+          </div>
+        
+
+        
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 2.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 2.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+       
+
+        
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 3.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
+
+
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 1.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 2.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
+
+
+           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 3.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------PREGUNTAS FRECUENTES------------------------------------------------------------------------->
+  
+  <section id="preguntas-frecuentes">
+    <div class="preguntas wrapper">
+      <div class="container">
+        <div class="row" style="margin-top: 8rem;">
+          <div class="col-sm-12">
+            <div class="text-center">
+              <h2 class="position-relative d-inline-block" id="PregTitle">Preguntas Frecuentes</h2>
+            </div>
+          </div>
+
+          <div class="parrafos row pt-5">
+              <div class="col-sm-6 mb-4">
+                <h5><span>~</span>Lorem ipsum dolor sit amet.</h5>
+                <p id="SobreNosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem, et, explicabo alias unde eligendi error repellat officia id dolorum voluptates deleniti modi, accusamus ipsa aperiam. Dolorem nihil perferendis ex!</p>
+              </div>
+
+              <div class="col-sm-6 mb-5">
+                <h5><span>~</span>Lorem ipsum dolor sit amet.</h5>
+                <p id="SobreNosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem, et, explicabo alias unde eligendi error repellat officia id dolorum voluptates deleniti modi, accusamus ipsa aperiam. Dolorem nihil perferendis ex!</p>
+              </div>
+
+              <div class="col-sm-6 mb-5">
+                <h5><span>~</span>Lorem ipsum dolor sit amet.</h5>
+                <p id="SobreNosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem, et, explicabo alias unde eligendi error repellat officia id dolorum voluptates deleniti modi, accusamus ipsa aperiam. Dolorem nihil perferendis ex!</p>
+              </div>
+
+              <div class="col-sm-6 mb-5">
+                <h5><span>~</span>Lorem ipsum dolor sit amet.</h5>
+                <p id="SobreNosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem, et, explicabo alias unde eligendi error repellat officia id dolorum voluptates deleniti modi, accusamus ipsa aperiam. Dolorem nihil perferendis ex!</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--FIN - PREGUNTAS FRECUENTES-->
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------CONTACTO-------------------------------------------------------------------------------->
+  <section id="contacto">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mt-5">
+          <h1 class="contacto-titulo pb-1">Contáctanos</h1>
+          <p class="contact-intro pt-3 pb-4">Como empresa nos encanta satisfacer al cliente, brindandole una atención al instante.</p>
+        </div>
+      </div>
+
+      <form action="#" class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="row g-3"> <!-- Generar espaciado a los costados y abajo - g-3 -->
+
+            <div class="grupo-form col-md-6">
+              <input type="text" class="form-control" placeholder="Nombre Completo">
+            </div>
+
+            <div class="grupo-form col-md-6">
+              <input type="email" class="form-control" placeholder="Correo electronico">
+            </div>
+
+            <div class="grupo-form col-md-12">
+              <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Mensaje"></textarea>
+            </div>
+
+            <div class="grupo-form col-md-12">
+              <a href="#" class=""><input type="submit" class="btn-mensaje" value="Enviar Mensaje"></a>
             </div>
 
           </div>
-        </nav>
+        </div>
+      </form>
+    </div>
+  </section>
 
-      </header>  
-
-
-      <div id="contenedor_barra_busqueda">
-        <input type="text" id="inputBusqueda" placeholder="¿Qué desea buscar?">
-      </div>
+<!--FIN - CONTACTO-->
 
 
-  <div id="fondo"></div>
+
+
+
+
+
+<!------------------------------------------------------------------------PIE DE PÁGINA----------------------------------------------------------------------------->
+<footer class="text-center text-lg-start bg-light text-muted mt-5">
+
+  <div class="container-fluid">
+    
+  <!-- Section: Social media -->
+  <section class="iconos-contact d-flex justify-content-center align-items-center text-center p-4 border-bottom">
+
+    <div>
+      <a href="" class="me-4 text-reset text-decoration-none">
+        <i class="fab fa-facebook-f text-decoration-none"></i>
+      </a>
+      <a href="" class="me-4 text-reset text-decoration-none">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset text-decoration-none">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset text-decoration-none">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section: Redes sociales -->
+
+  <!-- Section: Links  -->
+  <section id="section-contact" class="">
+    <div class="text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>InfinusLight
+          </h6>
+          <p>
+            Somos una empresa dedicada al desarrollo de software, brindandoles a nuestros clientes un excelente servicio.
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <div class="enlaces col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Enlaces Útiles
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Precios</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Ubicación</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Pedidos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Ayuda</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="contacto col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Canelones, 665, UY</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            infinuslight@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 096 456 879</p>
+        <!--  <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p> -->
+        </div>
+     </div>
+    </div>
+  </section>
   
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold text-decoration-none" href="https://mdbootstrap.com/">InfinusLight.com</a>
+  </div>
+  <!-- Copyright -->
+  </div>
+</footer>
+
+<!--FIN - PIE DE PÁGINA-->
+
+ 
+ 
+
+
+
+    </div><!--Div Fondo (Para que cierre el buscaor en cualquier parte de la página)-->
   </body>
 </html>
