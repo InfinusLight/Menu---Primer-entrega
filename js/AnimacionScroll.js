@@ -14,7 +14,7 @@ $("#fondo").click(ocultar_buscador);
         $("body, html").animate(
             {
                 scrollTop: $(this.hash).offset().top,
-            }, 900
+            }, 600
         );
     })
 })

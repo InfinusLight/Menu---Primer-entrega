@@ -15,6 +15,7 @@
   <script src="/js/AnimacionMenu.js"></script>
   <script src="/js/AnimacionScroll.js"></script>
   <script src="/js/Buscador.js"></script>
+  <script src="/js/BotonArriba.js"></script>
 
   <title>InfinusLight</title>
 
@@ -24,7 +25,7 @@
 
 </head>
 <body>
-<!---------------------------------------------------------------------------HEADER--------------------------------------------------------------------------------->
+<!--------------------------------------------------------HEADER----------------------------------------------------------------->
   <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
           <div class="container">
@@ -70,7 +71,7 @@
                   <a class="dropdown-item fw-bold fst-italic">Categorías</a> 
                     <li><hr class="dropdown-divider"></li>
 
-                    <li><a class="dropdown-item" href="#">Todos</a></li>
+                    <li><a class="dropdown-item" href="#title-platos">Todos</a></li>
                     <li><a class="dropdown-item" href="#">Española</a></li>
                     <li><a class="dropdown-item" href="#">Italiana</a></li>
                     <li><a class="dropdown-item" href="#">Criolla</a></li>
@@ -79,11 +80,11 @@
               
 
                 <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Nosotros</a>
+                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#sobre">Nosotros</a>
                 </li>
 
                 <li class="nav-item px-2 py-2 ">
-                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#">Contacto</a>
+                  <a class="desplazar nav-link text-uppercase text-dark fst-normal" href="#contacto">Contacto</a>
                 </li>
                 
               </ul>
@@ -103,7 +104,7 @@
 
 
 
-<!---------------------------------------------------------------------------SLIDER--------------------------------------------------------------------------------->
+<!----------------------------------------------------------SLIDER--------------------------------------------------------------->
 
   <div class="carousel slide" data-bs-ride="carousel">
 
@@ -116,15 +117,15 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active">
-        <img src="/Archivos/slider-1.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 1">
+        <img src="/foodies-images/images/bg/pizza1.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 1">
       </div>
 
       <div class="carousel-item">
-        <img src="/Archivos/slider-2.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 2">
+        <img src="/foodies-images/images/bg/pizza2.jpg" data-bs-interval="2000" class="d-block w-100" alt="slider 2">
       </div>
 
       <div class="carousel-item">
-        <img src="/Archivos/slider-3.png" data-bs-interval="2500" class="d-block w-100" alt="slider 3">
+        <img src="/foodies-images/images/bg/pizza3.jpg" data-bs-interval="2500" class="d-block w-100" alt="slider 3">
       </div>
 
     </div>
@@ -149,7 +150,12 @@
 
 
 
-<!-----------------------------------------------------------------------SOBRE NOSOTROS----------------------------------------------------------------------------->
+
+
+
+
+
+<!-------------------------------------------------------SOBRE NOSOTROS---------------------------------------------------------->
 
   <section id="sobre">
       <div class="sobre-section weapper mt-5">
@@ -157,12 +163,12 @@
           <div class="row align-items-center">
             <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
               <div class="card border-0">
-                <img src="/Archivos/Sobre nosotros.png" class="img-fluid">
+                <img src="/foodies-images/images/img/img-2.png" class="img-fluid">
               </div>
             </div>
             <div class="col-lg-5 col-md-12 info">
               <h2 id="h2">Felices de hacer comida real con los mejores ingredientes.</h2>
-              <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quasi, animi id iure corrupti exercitationem inventore error magnam quisquam voluptatibus earum numquam accusantium illum quaerat, similique nobis deserunt ratione? Deleniti?!</p>
+              <p id="p">Somos el mejor restaurante de la ciudad, con un equipo especializado para satisfacer las necesidades del cliente. Este año decidimos implementar nuestra propia pagina web, interactuando con el cliente, así como también brindando un buen servicio digital.</p>
             </div>
           </div>
         </div>
@@ -178,7 +184,14 @@
 
 
 
-<!---------------------------------------------------------------------------PLATOS--------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------PLATOS--------------------------------------------------------------->
 
 <section class="" id="explore-food">
   <div class="explore-food">
@@ -194,7 +207,7 @@
         <div class="row pt-5 d-flex">
           <div class="col-lg-4   col-md-6   mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 1.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pizza1-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 1.</h5>
 
@@ -210,7 +223,7 @@
         
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 2.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pizza2-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 2.</h5>
                 <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
@@ -224,7 +237,7 @@
         
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pizza/Pizza - 3.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pizza3-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 3.</h5>
                 <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
@@ -238,7 +251,7 @@
 
             <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 1.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pizza4-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 3.</h5>
                 <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
@@ -252,7 +265,7 @@
 
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 2.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pizza5-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 3.</h5>
                 <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
@@ -264,9 +277,12 @@
 
 
 
+
+
+
            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img src="/Archivos/Imagenes - Card/Italiana/Pastas/Pasta 3.jpg" class="img-fluid">
+              <img src="/foodies-images/images/img/pasta1-card.jpg" class="img-fluid">
               <div class="p-3">
                 <h5 class="pb-3">Pizza 3.</h5>
                 <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
@@ -274,7 +290,46 @@
                 <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
               </div>
             </div>
-          </div>    
+          </div> 
+          
+          
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/foodies-images/images/img//pasta2-card.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/foodies-images/images/img/pasta3-card.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card border">
+              <img src="/foodies-images/images/img/pasta4-card.jpg" class="img-fluid">
+              <div class="p-3">
+                <h5 class="pb-3">Pizza 3.</h5>
+                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptate.</p>
+                <a href="#"><button class="mt-2 main-btn">Añadir al carrito</button></a>
+                <a href="#"><button class="mt-2 main-btn">Leer más</button></a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -376,6 +431,11 @@
 
 
 
+<!--Botón de ir hacia arriba-->
+
+<a href="#" class="boton">
+    <i class="fa fa-solid fa-chevron-up"></i>
+</a>
 
 
 
@@ -447,7 +507,7 @@
         <div class="contacto col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Contact
+            Contacto
           </h6>
           <p><i class="fas fa-home me-3"></i> Canelones, 665, UY</p>
           <p>
@@ -472,7 +532,6 @@
 </footer>
 
 <!--FIN - PIE DE PÁGINA-->
-
  
  
 

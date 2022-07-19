@@ -357,6 +357,8 @@ header i:hover{
 
 
 
+
+
 /*----------------------------------------------------------------------------SLIDER-------------------------------------------------------------------------------*/
 
 .carousel-inner{
@@ -368,6 +370,17 @@ header i:hover{
 /*SLIDER - RESPONSIVE...*/
 
 /*-------------------------------------------------------------------------FIN - SLIDER----------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -538,6 +551,10 @@ header i:hover{
 
 
 
+
+
+
+
 /*------------------------------------------------------------------------Preguntas Frecuentes---------------------------------------------------------------------*/
 #preguntas-frecuentes{
   margin-bottom: 8rem;
@@ -586,6 +603,45 @@ header i:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*Boton hacia arriba*/
+.boton{
+  width: 45px;
+  height: 45px;
+  background: var(--Segundo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Quinto);
+  border-radius: 50%;
+  font-size: 14px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+}
+
+
+.boton i{
+  text-decoration: none;
+}
+
+.boton:hover{
+  transform: scale(1.1);
+  border-color: rgba(0,0,0,0.1);
+  color: white;
+}
 
 
 
